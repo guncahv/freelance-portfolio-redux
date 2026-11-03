@@ -1,0 +1,141 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 64px;
+}
+
+/* Первый экран */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 360px);
+  align-items: center;
+  gap: 48px;
+  padding: 64px 0 48px;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background-color: var(--brand-primary-subtle);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--brand-primary);
+}
+
+/* Heading/H1: Manrope ExtraBold 48/56 */
+.h1 {
+  margin: 0;
+  max-width: 620px;
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+}
+
+/* Body/Large: Inter 18/28 */
+.lead {
+  margin: 0;
+  max-width: 560px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--neutral-600);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Разделы */
+.section {
+  padding: 32px 0;
+}
+
+/* Heading/H2: Manrope Bold 32/40 */
+.h2 {
+  margin: 0 0 24px;
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Блок «Обсудим ваш проект?» */
+.contact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 32px;
+  padding: 32px 40px;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-card);
+  background-color: var(--neutral-0);
+  box-shadow: var(--shadow-card);
+}
+
+.contact .h2 {
+  margin-bottom: 8px;
+}
+
+.contact > div:first-child {
+  max-width: 340px;
+}
+
+.contactText {
+  margin: 0;
+  color: var(--neutral-600);
+}
+
+
+
+@media (max-width: 900px) {
+  .page {
+    padding: 0 20px 48px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+  }
+
+  .photo {
+    max-width: 360px;
+  }
+
+  .h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+  }
+
+
+}
