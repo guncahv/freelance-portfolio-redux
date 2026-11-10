@@ -1,0 +1,72 @@
+/* Дизайн-токены из ЛР №17 (Paint / Text / Effect styles) */
+:root {
+  /* Brand */
+  --brand-primary: #4f46e5;
+  --brand-primary-hover: #4338ca;
+  --brand-primary-pressed: #3730a3;
+  --brand-primary-subtle: #eef2ff;
+  --brand-accent: #10b981;
+
+  /* Neutral */
+  --neutral-900: #0f172a;
+  --neutral-600: #475569;
+  --neutral-400: #94a3b8;
+  --neutral-300: #cbd5e1;
+  --neutral-200: #e2e8f0;
+  --neutral-100: #f1f5f9;
+  --neutral-50: #f8fafc;
+  --neutral-0: #ffffff;
+
+  /* Feedback */
+  --feedback-error: #dc2626;
+  --feedback-error-subtle: #fef2f2;
+  --feedback-favorite: #f43f5e;
+
+  /* Typography */
+  --font-heading: 'Manrope', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-code: 'JetBrains Mono', Consolas, monospace;
+
+  /* Effects */
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.06), 0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-card-hover: 0 2px 4px rgba(15, 23, 42, 0.06), 0 16px 32px -4px rgba(15, 23, 42, 0.14);
+  --shadow-header: 0 1px 0 rgba(15, 23, 42, 0.06), 0 4px 12px rgba(15, 23, 42, 0.05);
+  --focus-ring: 0 0 0 4px rgba(79, 70, 229, 0.25);
+  --focus-error-ring: 0 0 0 4px rgba(220, 38, 38, 0.18);
+
+  /* Radii */
+  --radius-tag: 6px;
+  --radius-nav: 10px;
+  --radius-control: 12px;
+  --radius-card: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--neutral-900);
+  background-color: var(--neutral-50);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Иконка из SVG-ассета, перекрашиваемая через color (маска + currentColor) */
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  mask: var(--icon) center / contain no-repeat;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+}
