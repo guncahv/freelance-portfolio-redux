@@ -1,0 +1,110 @@
+/* Уведомление (toast): фиксировано в правом нижнем углу, радиус 12, тень Shadow/Card Hover */
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 20;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: min(380px, calc(100vw - 32px));
+  padding: 16px;
+  border: 1px solid var(--neutral-200);
+  border-left-width: 4px;
+  border-radius: 12px;
+  background-color: var(--neutral-0);
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.06), 0 16px 32px -4px rgba(15, 23, 42, 0.14);
+  animation: slide-in 0.2s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.loading {
+  border-left-color: var(--brand-primary);
+}
+
+.success {
+  border-left-color: var(--brand-accent);
+}
+
+.error {
+  border-left-color: #dc2626;
+}
+
+.marker {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.loading .marker {
+  background-color: var(--brand-primary-subtle);
+}
+
+.success .marker {
+  background-color: var(--brand-accent);
+}
+
+.error .marker {
+  background-color: #dc2626;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--brand-primary);
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  margin: 0 0 2px;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--neutral-600);
+}
+
+.close {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--neutral-400);
+  cursor: pointer;
+}
+
+.close:hover {
+  background-color: var(--neutral-100);
+  color: var(--neutral-900);
+}
