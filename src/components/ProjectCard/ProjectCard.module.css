@@ -1,0 +1,144 @@
+/* Project Card: вертикальный Auto Layout, тело — отступ 24, gap 12, радиус 20 */
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-card);
+  background-color: var(--neutral-0);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* State: Hover — карточка «поднимается», заголовок окрашивается в основной цвет */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card:hover .title {
+  color: var(--brand-primary);
+}
+
+.cover {
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 5;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.card:hover .image {
+  transform: translateY(-4px);
+}
+
+/* Favorite: Off / On */
+.favorite {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--neutral-0);
+  box-shadow: var(--shadow-card);
+  color: var(--neutral-900);
+  cursor: pointer;
+}
+
+.favorite:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.favoriteOn {
+  color: var(--feedback-favorite);
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 24px 24px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Code/Tag: JetBrains Mono Medium 12/16 */
+.tag {
+  padding: 4px 8px;
+  border-radius: var(--radius-tag);
+  background-color: var(--neutral-100);
+  font-family: var(--font-code);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--neutral-600);
+}
+
+/* Heading/H3: Manrope Bold 20/28 */
+.title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  transition: color 0.2s;
+}
+
+/* Body/Small: Inter 14/20 */
+.description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--neutral-600);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+/* Label/Field: Inter Medium 14/20 */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--brand-primary-hover);
+}
+
+/* Caption: Inter 12/16 */
+.meta {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--neutral-400);
+}
