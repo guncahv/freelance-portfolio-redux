@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.row {
+  display: grid;
+  /* minmax(0, 1fr) позволяет колонкам сжиматься уже ширины поля ввода */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Caption */
+.counter {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--neutral-600);
+}
+
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
